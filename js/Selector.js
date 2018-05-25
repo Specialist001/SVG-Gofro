@@ -58,6 +58,12 @@ class Selector {
 					offset.x = parseFloat( target.getAttribute( 'cx' ) ) - event.clientX;
 					offset.y = parseFloat( target.getAttribute( 'cy' ) ) - event.clientY;
 
+				}
+				else if ( target.tagName === 'line' ) {
+
+					offset.x = parseFloat( target.getAttribute( 'x2' ) ) - event.clientX;
+					offset.y = parseFloat( target.getAttribute( 'y2' ) ) - event.clientY;
+
 				} else {
 
 					offset.x = parseFloat( target.getAttribute( 'x' ) ) - event.clientX;
